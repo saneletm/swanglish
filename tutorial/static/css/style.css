@@ -1,0 +1,42 @@
+.title{
+  text-align:center;
+        }
+
+.description{
+  color:#a4a4a4;
+  text-align:center;
+}
+
+.translation{
+ background-color: #cfc;
+ text-align: center;
+ font-weight: bold;
+ color: #0000ff;
+}
+
+h1 {
+  font-family: freesans, sans-serif;
+  color:#585858;
+}
+
+h3 {
+  color:#a4a4a4;
+  text-align:center;
+}
+
+body {
+  background-color: #ced8f6;
+}
+
+.cont{
+  background-color: #f5fbef;
+}
+
+.topbar{
+  background-color: #2e2e2e;
+}
+
+.seperator {
+  background-color: #ffc;
+
+}
