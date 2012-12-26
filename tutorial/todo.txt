@@ -58,13 +58,13 @@ host page
 
 12/23/12
 =============================
-dropdown  ---- Done
-load notepad to postgres --- Done
-git
-tmux
-dictionery  (make tables, fill and query them)
-put files in google doc and share with Lisa -- Done
-translate sentences
-don't enter repitions
-space/(-) seperated result from query should be comma seperated on paragraph
-
+* tmux
+* scan pages and send to Lisa
+* dictionery  (make tables, fill and query them)
+* translate sentences
+* space/(-) seperated result from query should be comma seperated on paragraph
+* make page viewable from tablets/phone (media)
+* might need to hire people
+* models for db
+* forms ???
+* process and do loading in pyramid,
