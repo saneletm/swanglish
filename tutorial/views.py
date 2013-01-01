@@ -48,33 +48,38 @@ def swanglish(request):
 @view_config(route_name='translate', renderer='json')
 def translate(request):
     translate_word = request.POST['translate_word']
-    language = request.POST['language']
     translatedword = ""
-    print "Language: %s " % (language)
-    #sql = text('''select english_version from swanglish where siswati_version="%s";''' % (translate_word,))
-    if language == "siswati":  # translating siswati
-        sql = text('''select english_version from swanglish where siswati_version='%s' ''' % (translate_word))
-        try:
-            result = DBSession.execute(sql)
-        except DBAPIError, e:
-            log.debug("Error in query: %s " % e)
-            return []
+    # try SiSwati disctinary
+    translate_list = []
+    translation_list = []
+    sql = text('''select siswati_version, english_version from swanglish where siswati_version='%s' ''' % (translate_word))
+    try:
+        result = DBSession.execute(sql)
         for i in result:
+            translate_list.append(i.siswati_version)
+            translation_list.append(i.english_version)
             translatedword = i.english_version
             log.debug("translatedword %s" % (translatedword))
-    else:  # Translating english
-        sql = text('''select siswati_version from swanglish where english_version='%s' ''' % (translate_word))
-        try:
-            result = DBSession.execute(sql)
-        except DBAPIError, e:
-            log.debug("Error in query: %s " % e)
-            return []
+    except DBAPIError, e:
+        log.debug("Error in query: %s " % e)
+        return []
+    # try English ditionary
+    sql = text('''select english_version, siswati_version from swanglish where english_version='%s' ''' % (translate_word))
+    try:
+        result = DBSession.execute(sql)
         for i in result:
             translatedword = i.siswati_version
+            translate_list.append(i.english_version)
+            translation_list.append(i.siswati_version)
             log.debug("translatedword %s" % (translatedword))
+    except DBAPIError, e:
+        log.debug("Error in query: %s " % e)
+        return []
+    print "translate_list %s, translation_list %s" % (translate_list, translation_list)
 
     if len(translatedword) < 1:
         translatedword = translate_word
     else:
-        pass
-    return {"translatedword": translatedword}
+        translatedword = translatedword.replace("#", ",")
+
+    return {"translatedword": translatedword, 'translate_list': translate_list, 'translation_list': translation_list}

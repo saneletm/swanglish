@@ -3,15 +3,11 @@
         }
 
 .description{
-  color:#a4a4a4;
   text-align:center;
 }
 
 .translation{
- background-color: #cfc;
- text-align: center;
- font-weight: bold;
- color: #0000ff;
+ color: #1c1c1c;
 }
 
 h1 {
@@ -20,16 +16,21 @@ h1 {
 }
 
 h3 {
-  color:#a4a4a4;
   text-align:center;
 }
 
+h5 { color: #1c1c1c;}
+
 body {
-  background-color: #ced8f6;
+  background-image: url("/static/images/body_img4.jpg");
 }
 
 .cont{
-  background-color: #f5fbef;
+  background-image: url("/static/images/translations.jpg");
+}
+
+.comments{
+  background-image: url("/static/images/comments1.jpg");
 }
 
 .topbar{

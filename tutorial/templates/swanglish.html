@@ -13,25 +13,14 @@
     <p class="topbar" >&nbsp;</p>
     <p>&nbsp;</p>
     <div class="container cont ">
-    <h1 class="title">English - SiSwati Translator</h1>
-    <h3 class="description">A mini translator </h3>
+    <legend><h3>Bilingual Dictionary</h3><h4 class="description">'Sichazamagama'</h4></legend>
+    <h5 class="description">SiSwati - English</h5>
     <p> </p>
     <form id="trans_form" action="#" method="post">
-        <!-- dropdown button-->
-        <div align="center">
-        <select id="language">
-          <option value="siswati">SiSwati to English</option>
-          <option value="english">English to SiSwati</option>
-        </select>  
-      </div>
       <div align="center"> 
-        <textarea  id="trans_word" class="span4" name="text" rows="5" 
+        <textarea  id="trans_word" class="span4" name="text" rows="1" 
             placeholder="Enter line to translate" onkeyup="translate_word(this.value)"></textarea>
       </div>
-      <div class="translation">
-        <p id = "translated_word" class="translation" align="center"> &nbsp; </p>
-      </div>
-
       <div class="row-fluid">
       <div class="span3">
     </div> <!--span3 -->
@@ -39,9 +28,18 @@
     </form> <!-- input form -->
   </div>  <!-- center -->
   </div><!--container -->
-    <p>&nbsp;</p>
+  <div class="container">
+      <div class="row-fluid">
+        <div class="span6">
+          <p> &nbsp; </p>
+          <h6 id="matches"></h6>
+        <table  id="translated_table" class="table table-hover translation">
+        </table>
+      </div> <!-- span6 -->
+      </div> <!-- row -->
+    </div> <!-- white container -->
     <!--comments -->
-    <div class="container cont">
+    <div class="container comments">
     <form id="comments_form" action="#" method="post">
         <!-- dropdown button-->
     <legend>Comments </legend>
@@ -63,15 +61,38 @@
          function translate_word(somevalue) {
            var translate_word = somevalue;
            var base_url = "";
-           var e = document.getElementById('language');
-           var language = e.options[e.selectedIndex].value;
            var url = "http://localhost:6543/swanglish/translate"
-           $.post(url, {translate_word: translate_word, language: language},
+           $.post(url, {translate_word: translate_word},
            function (data) {
-            $('#translated_word').replaceWith('<p id = "translated_word" class="translation" align="center">' + data.translatedword +' </p>');
-            console.log(translate_word);
-            console.log(data.translatedword);
-         });
+              var translated_array = (data.translatedword).split(',');
+              var array_length = translated_array.length;
+
+              if((data.translation_list).length != 0){
+                $('#matches').replaceWith(' <h6 id="matches" class="alert alert-success"><b> matches: </b></h6> ');
+                $('#translated_table').replaceWith('<table  id="translated_table" class="table table-hover translation"></table>');
+                  var translate_lengnth = (data.translate_list).length
+                  var translation_length = (data.translation_list).length
+                  for (var j=0; j < translate_lengnth; j++) {
+                    var translation_array = (data.translation_list[j]).split('#');
+                    var translation_array_length = translation_array.length;
+                    var word_type = ((translation_array[0]).split(" "))[0]
+                    var first_word = ((translation_array[0]).split(" "))[1]
+                    console.log("translation_array " + translation_array)
+                    $('#translated_table').append('<tr><td>' + (j + 1) + '</td><td colspan="2">' + 
+                                                              data.translate_list[j] + " " + word_type +'</td></tr>');
+                    for (var i=1; i < translation_array_length + 1; i++) {
+                      if (i == 1) {
+                      $('#translated_table').append('<tr><td></td><td>-</td><td>' + first_word +' </tr>');
+                        } else {
+                      $('#translated_table').append('<tr><td></td><td>-</td><td>' + translation_array[i -1] +' </tr>');
+                      }
+                    }
+                }
+              }else{
+              $('#matches').replaceWith('<h6 id="matches" class="alert alert-error"><b> No matches found </b></h6> ');
+              $('#translated_table').replaceWith('<table  id="translated_table" class="table table-hover translation"></table>');
+            }
+          });
        }
         </script>
   </body>
