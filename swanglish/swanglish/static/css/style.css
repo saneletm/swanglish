@@ -1,0 +1,43 @@
+.title{
+  text-align:center;
+        }
+
+.description{
+  text-align:center;
+}
+
+.translation{
+ color: #1c1c1c;
+}
+
+h1 {
+  font-family: freesans, sans-serif;
+  color:#585858;
+}
+
+h3 {
+  text-align:center;
+}
+
+h5 { color: #1c1c1c;}
+
+body {
+  background-image: url("/static/images/body_img7.jpg");
+}
+
+.cont{
+  background-image: url("/static/images/translations.jpg");
+}
+
+.comments{
+  background-image: url("/static/images/comments1.jpg");
+}
+
+.topbar{
+  background-color: #2e2e2e;
+}
+
+.seperator {
+  background-color: #ffc;
+
+}
