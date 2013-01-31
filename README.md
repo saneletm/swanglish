@@ -1,7 +1,8 @@
 swanglish
 =========
 
-a library of english-siswati translations
+A library for a SiSwati translator
+
 Version1
 ---------
 SiSwati English Translation
