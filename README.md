@@ -8,14 +8,13 @@ A library for a SiSwati translator
 Expected Releases
 ----------------------------
 
-*Version1
+Version1
 - SiSwati English Translation
 
-*Version2
+Version2
 - SiSwati Spanish Translations
 
-
-*Version3
+Version3
 - SiSwati French Translations
 
 version4
