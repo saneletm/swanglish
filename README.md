@@ -1,5 +1,5 @@
 swanglish
-=========
+----------------
 
 A library for a SiSwati translator
 
@@ -22,6 +22,7 @@ tranlations
 translations.
 
 ###Version3
+***
 - This version will be a web application capable of doing
  * SiSwati to English
  * English to SiSwati
@@ -32,6 +33,7 @@ translations.
 translations.
 
 ###version4
+***
 - This version will be a web application capable of doing
  * SiSwati to English
  * English to SiSwati
