@@ -6,15 +6,15 @@ A library for a SiSwati translator
 ##Expected Releases
 
 ###Version1
-- SiSwati English Translation
-  Will be a web application (a translator) for SiSwati to English and
-  English to SiSwati Translations
+- This version will be a web application for translating between SiSwati and English
 
 ###Version2
-- SiSwati Spanish Translations
-Will be a web application (a translator) for translations between any two
-of SiSwati, English and Spanish. Primariry meant to Translate either SiSwati 
-to English or Spanish OR English or Spanish to SiSwati
+- This version will be a web application capable of doing
+ * SiSwati to English
+ * English to SiSwati
+ * SiSwati to Spanish
+ * Spanish to SiSwati
+ translations
 
 ###Version3
 - SiSwati French Translations
