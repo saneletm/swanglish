@@ -18,5 +18,5 @@ SiSwati Spanish Translations
 *Version3
 SiSwati French Translations
 
-#version4
-webapp + mobile app available
+version4
+- webapp + mobile app available
