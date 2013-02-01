@@ -9,8 +9,8 @@ A library for a SiSwati translator
 ###Version1
 ---
 - This version will be a web application capable of doing
- _* English to SiSwati_
- _* SiSwati to English_ <br /> 
+ * _English to SiSwati_
+ * _SiSwati to English_ <br /> 
 tranlations
 
 ###Version2
