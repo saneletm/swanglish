@@ -28,7 +28,6 @@ translations.
  * SiSwati to French
  * French to SiSwati <br /> 
 translations.
-- 
 
 ###version4
 - This version will be a web application capable of doing
