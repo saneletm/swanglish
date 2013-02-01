@@ -8,7 +8,7 @@ A library for a SiSwati translator
 ###Version1
 - This version will be a web application capable of doing
  * English to SiSwati
- * SiSwati to English 
+ * SiSwati to English <br /> 
 tranlations
 
 ###Version2
@@ -16,7 +16,7 @@ tranlations
  * SiSwati to English
  * English to SiSwati
  * SiSwati to Spanish
- * Spanish to SiSwati
+ * Spanish to SiSwati <br /> 
 translations.
 
 ###Version3
@@ -26,7 +26,7 @@ translations.
  * SiSwati to Spanish
  * Spanish to SiSwati
  * SiSwati to French
- * French to SiSwati
+ * French to SiSwati <br /> 
 translations.
 - 
 
@@ -37,6 +37,6 @@ translations.
  * SiSwati to Spanish
  * Spanish to SiSwati
  * SiSwati to French
- * French to SiSwati
-translations.
+ * French to SiSwati <br /> 
+translations.<br /> 
 AND WILL FREATURE BOTH A WEB VERSION AND MOBILE APP FOR BOTH iOSX AND ANDROID
