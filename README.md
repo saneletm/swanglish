@@ -1,4 +1,4 @@
-#swanglish
+#SWANGLISH
 ***
 
 A library for a SiSwati translator
