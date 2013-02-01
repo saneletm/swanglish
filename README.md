@@ -6,12 +6,14 @@ A library for a SiSwati translator
 ##Expected Releases
 
 ###Version1
+***
 - This version will be a web application capable of doing
  * English to SiSwati
  * SiSwati to English <br /> 
 tranlations
 
 ###Version2
+* * *
 - This version will be a web application capable of doing
  * SiSwati to English
  * English to SiSwati
