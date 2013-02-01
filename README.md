@@ -9,14 +9,14 @@ Expected Releases
 ----------------------------
 
 *Version1
-SiSwati English Translation
+- SiSwati English Translation
 
 *Version2
-SiSwati Spanish Translations
+- SiSwati Spanish Translations
 
 
 *Version3
-SiSwati French Translations
+- SiSwati French Translations
 
 version4
 - webapp + mobile app available
