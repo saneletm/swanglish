@@ -16,31 +16,31 @@ tranlations
 ###Version2
 ---
 - This version will be a web application capable of doing
- * SiSwati to English
- * English to SiSwati
- * SiSwati to Spanish
- * Spanish to SiSwati <br /> 
+ * _SiSwati to English_
+ * _English to SiSwati_
+ * _SiSwati to Spanish_
+ * _Spanish to SiSwati_ <br /> 
 translations.
 
 ###Version3
 ---
 - This version will be a web application capable of doing
- * SiSwati to English
- * English to SiSwati
- * SiSwati to Spanish
- * Spanish to SiSwati
- * SiSwati to French
- * French to SiSwati <br /> 
+ * _SiSwati to English_
+ * _English to SiSwati_
+ * _SiSwati to Spanish_
+ * _Spanish to SiSwati_
+ * _SiSwati to French_
+ * _French to SiSwati_ <br /> 
 translations.
 
 ###version4
 ---
 - This version will be a web application capable of doing
- * SiSwati to English
- * English to SiSwati
- * SiSwati to Spanish
- * Spanish to SiSwati
- * SiSwati to French
- * French to SiSwati <br /> 
+ * _SiSwati to English_
+ * _English to SiSwati_
+ * _SiSwati to Spanish_
+ * _Spanish to SiSwati_
+ * _SiSwati to French_
+ * _French to SiSwati_ <br /> 
 translations.<br /> 
 *AND WILL FEATURE BOTH A WEB VERSION AND MOBILE APP FOR BOTH iOSX AND ANDROID*
