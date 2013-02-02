@@ -108,11 +108,11 @@
                   for (var j=0; j < translate_lengnth; j++) {
                     var translation_array = (data.translation_list[j]).split('#');
                     var translation_array_length = translation_array.length;
-                    var word_type = ((translation_array[0]).split(" "))[0]
-                    var first_word = ((translation_array[0]).split(" "))[1]
+                    var word_type = ((translation_array[0]).split(" "))[1]
+                    var first_word = ((translation_array[0]).split(" "))[2]
+                    console.log("word_type and first_word" + word_type + " " + first_word);
                     console.log("translation_array " + translation_array)
-                    $('#translated_table').append('<tr><td>' + (j + 1) + '</td><td colspan="2">' + 
-                                                              data.translate_list[j] + " " + word_type +'</td></tr>');
+                    $('#translated_table').append('<tr><td>' + (j + 1) + '</td><td colspan="2">' + data.translate_list[j] + " " + word_type +'</td></tr>');
                     for (var i=1; i < translation_array_length + 1; i++) {
                       if (i == 1) {
                       $('#translated_table').append('<tr><td></td><td>-</td><td>' + first_word +' </tr>');
