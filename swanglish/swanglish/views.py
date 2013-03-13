@@ -1,27 +1,21 @@
 from pyramid.response import Response
+from pyramid.security import authenticated_userid
+from pyramid.exceptions import Forbidden
 from pyramid.view import view_config
-
-
 from sqlalchemy.sql import text
-
 from sqlalchemy.exc import DBAPIError
+from .models import (DBSession, MyModel)
 import logging
-
-from .models import (
-    DBSession,
-    MyModel,
-    )
 
 log = logging.getLogger(__name__)
 
 
-@view_config(route_name='home', renderer='templates/mytemplate.pt')
+@view_config(route_name='home', renderer='templates/homepage.html')
 def my_view(request):
-    try:
-        one = DBSession.query(MyModel).filter(MyModel.name == 'one').first()
-    except DBAPIError:
-        return Response(conn_err_msg, content_type='text/plain', status_int=500)
-    return {'one': one, 'project': 'tutorial'}
+    userid = authenticated_userid(request)
+    if userid is None:
+        raise Forbidden()
+    return {'user': userid}
 
 conn_err_msg = """\
 Pyramid is having a problem using your SQL database.  The problem
@@ -42,7 +36,7 @@ try it again.
 
 @view_config(route_name='swanglish', renderer='templates/swanglish.html')
 def swanglish(request):
-    return {'name': 'Lisa Darling Darby'}
+    return {'name': 'name'}
 
 
 @view_config(route_name='translate', renderer='json')

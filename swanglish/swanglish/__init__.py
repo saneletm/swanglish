@@ -7,9 +7,14 @@ from .models import DBSession
 def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.
     """
+    settings['persona.secrete'] = 'secrete_string'
+    settings['persona.audiences'] = 'http://localhost:6543'
+
     engine = engine_from_config(settings, 'sqlalchemy.')
     DBSession.configure(bind=engine)
+
     config = Configurator(settings=settings)
+    config.include('pyramid_persona')
 
     config.include('pyramid_jinja2')
     config.add_renderer('.html', 'pyramid_jinja2.renderer_factory')
