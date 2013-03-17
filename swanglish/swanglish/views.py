@@ -1,6 +1,4 @@
-from pyramid.response import Response
-from pyramid.security import authenticated_userid
-from pyramid.exceptions import Forbidden
+#from pyramid.response import Response
 from pyramid.view import view_config
 from sqlalchemy.sql import text
 from sqlalchemy.exc import DBAPIError
@@ -11,11 +9,9 @@ log = logging.getLogger(__name__)
 
 
 @view_config(route_name='home', renderer='templates/homepage.html')
-def my_view(request):
-    userid = authenticated_userid(request)
-    if userid is None:
-        raise Forbidden()
-    return {'user': userid}
+def homepage(request):
+    return {'name': 'name'}
+
 
 conn_err_msg = """\
 Pyramid is having a problem using your SQL database.  The problem
@@ -75,5 +71,4 @@ def translate(request):
         translatedword = translate_word
     else:
         translatedword = translatedword.replace("#", ",")
-
     return {"translatedword": translatedword, 'translate_list': translate_list, 'translation_list': translation_list}

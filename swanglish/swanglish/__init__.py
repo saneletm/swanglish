@@ -7,7 +7,7 @@ from .models import DBSession
 def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.
     """
-    settings['persona.secrete'] = 'secrete_string'
+    settings['persona.secrete'] = 'some secreate string'
     settings['persona.audiences'] = 'http://localhost:6543'
 
     engine = engine_from_config(settings, 'sqlalchemy.')
